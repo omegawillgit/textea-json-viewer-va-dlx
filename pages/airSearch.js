@@ -1,18 +1,8 @@
-import { JsonViewer, defineDataType } from '@textea/json-viewer';
+import { JsonViewer } from '@textea/json-viewer';
 import { useCallback, useEffect, useState } from 'react';
 
 import airSearch from '../data/airSearch.json';
-
-import { itinerarySchema } from '../schemas/itinerary';
-
-const itineraryType = defineDataType({
-  is: (value) => {
-    return itinerarySchema.safeParse(value).success;
-  },
-  Component: (props) => {
-    return <>{props}</>;
-  },
-});
+import { itineraryType } from '../dataType/itinerary';
 
 const IndexPage = () => {
   const [src, setSrc] = useState(() => airSearch);
