@@ -2,7 +2,7 @@ import { JsonViewer } from '@textea/json-viewer';
 import { useCallback, useEffect, useState } from 'react';
 
 import airSearch from '../data/airSearch.json';
-import { itineraryType } from '../dataType/itinerary';
+import { originDestinationType } from '../dataType/originDestination';
 
 const IndexPage = () => {
   const [src, setSrc] = useState(() => airSearch);
@@ -16,7 +16,7 @@ const IndexPage = () => {
         indentWidth="2"
         highlightUpdates={true}
         defaultInspectDepth={3}
-        valueTypes={[itineraryType]}
+        valueTypes={[originDestinationType]}
       />
     </div>
   );
