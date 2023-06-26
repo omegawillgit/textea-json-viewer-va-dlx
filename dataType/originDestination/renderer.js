@@ -1,5 +1,4 @@
-import { JsonViewer } from '@textea/json-viewer';
-import { flightSegmentType } from '../../dataType/flightSegment';
+import { CustomJsonViewer } from '../../components/CustomJsonViewer';
 
 export const originDestinationRenderer = (props) => {
   return (
@@ -7,15 +6,7 @@ export const originDestinationRenderer = (props) => {
       Duration {props.value.duration}
       <br />
       Arrival Offset {props.value.arrivalOffset}
-      <JsonViewer
-        value={props.value.flightSegment}
-        editable={true}
-        theme={'auto'}
-        indentWidth="2"
-        highlightUpdates={true}
-        defaultInspectDepth={0}
-        valueTypes={[flightSegmentType]}
-      />
+      <CustomJsonViewer value={props.value.flightSegment} />
     </>
   );
 };
