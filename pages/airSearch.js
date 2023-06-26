@@ -11,7 +11,7 @@ const IndexPage = () => {
     <div>
       <JsonViewer
         value={src}
-        editable={true}
+        editable={false}
         theme={'auto'}
         indentWidth="2"
         highlightUpdates={true}
