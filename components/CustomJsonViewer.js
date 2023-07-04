@@ -1,4 +1,5 @@
 import { JsonViewer } from '@textea/json-viewer';
+import { commonPriceType } from '../dataType/commonPrice';
 import { flightSegmentType } from '../dataType/flightSegment';
 import { itineraryType } from '../dataType/itinerary';
 import { itineraryPriceType } from '../dataType/itineraryPrice';
@@ -15,9 +16,10 @@ export const CustomJsonViewer = (value) => (
     defaultInspectDepth={3}
     valueTypes={[
       itineraryType,
-      itineraryPriceType,
+      // itineraryPriceType,
       originDestinationType,
       flightSegmentType,
+      commonPriceType,
       uriType,
     ]}
   />
